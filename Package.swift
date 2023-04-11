@@ -17,19 +17,14 @@ let package = Package(
     products: [
         .library(
             name: "Algorithms",
-            targets: ["Algorithms"]),
-    ],
-    dependencies: [
-        .package(url: "https://github.com/apple/swift-numerics", from: "1.0.0"),
+            targets: ["Algorithms"]
+        )
     ],
     targets: [
-        .target(
-            name: "Algorithms",
-            dependencies: [
-              .product(name: "RealModule", package: "swift-numerics"),
-            ]),
+        .target(name: "Algorithms"),
         .testTarget(
             name: "SwiftAlgorithmsTests",
-            dependencies: ["Algorithms"]),
+            dependencies: ["Algorithms"]
+        )
     ]
 )
